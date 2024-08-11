@@ -1,0 +1,76 @@
+header {
+    .block {
+        position: relative;
+        width: 1113.71px;
+        height: 29.46px;
+        left: calc(50% - 1113.71px/2 - 0.15px);
+        top: 70px; 
+    }
+    @media (max-width: 1150px) {
+        .block {
+            width: 800px;
+            left: calc(50% - 800px/2 - 0.15px);
+        }
+    }
+    .logo {
+        position: absolute;
+        width: 129.79px;
+        height: 29.46px;
+    }
+    .vkladki {
+        position: absolute;
+        height: 20.7px;
+        right: 0;
+        margin-top: 6px;
+        display: inline-block;
+    }
+    .vkladki-text {
+        font-family: Montserrat;
+        font-size: 15.93px;
+        font-weight: 400;
+        line-height: 19.41px;
+        text-align: left;
+        color: rgba(29, 29, 27, 1);
+    }
+    a {
+        text-decoration: none !important;
+    }
+    .arrows svg path {
+        fill: rgba(29, 29, 27, 1);
+    }
+    .arrow-1, .arrow-2 {
+        transition: transform 0.5s ease;
+    }
+    .flipped {
+        transform: rotate(180deg);
+    }
+    a:hover, .item:hover {
+        .vkladki-text {
+            color: rgba(122, 122, 122, 1);
+        }
+        .arrows svg path {
+            fill: rgba(122, 122, 122, 1);
+        }
+    }
+    .item {
+        display: flex;
+        float: left;
+        margin-right: 50px;
+        height: 20.7px;
+        cursor: pointer;
+    }
+    .services-tab {
+        display: none;
+        position: absolute;
+        width: 317px;
+        height: 344px;
+        background-color: aqua;
+        filter: drop-shadow(0px 160px 129.12px rgba(56, 45, 44, 0.1));
+    }
+    
+    .item-1:hover {
+        .services-tab {
+            display: block;
+        }
+    }
+}
