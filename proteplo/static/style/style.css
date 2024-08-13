@@ -76,7 +76,10 @@ header {
         }
     }
     .services-tab {
+        display: flex;
         position: absolute;
+        flex-direction: column;
+        justify-content: space-around;
         width: 261.63px;
         height: 272px;
         top: 0;
@@ -85,28 +88,23 @@ header {
         left: 0;
         margin: auto;
     }
+    .services-tab .item .vkladki-text, .services-tab .vkladki-text, .services-tab .vkladki-text:visited {
+        color: rgb(29, 29, 27);
+    }
+    .services-tab .item .arrows svg path {
+        fill: rgb(29, 29, 27);
+    }
+    .services-tab .item {
+        width: 100%;
+    }
+    .services-tab .item .arrows {
+        position: absolute;
+        cursor: auto;
+        right: 0;
+    }
     .item-1:hover {
         .services-tab-box {
             display: flex;
-            cursor:auto;
-        }
-        .services-tab {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            .vkladki-text {
-                color: rgb(29, 29, 27);
-            }
-            .arrows svg path {
-                fill: rgb(29, 29, 27);
-            }
-            .item {
-                width: 100%;
-            }
-            .arrows {
-                position: absolute;
-                right: 0;
-            }
         }
         a:hover, .item:hover {
             .vkladki-text {
