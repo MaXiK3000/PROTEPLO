@@ -1,6 +1,9 @@
 html {
     margin: 0;
     padding: 0;
+    a {
+        text-decoration: none !important;
+    }
 }
 header {
     width: auto;
@@ -38,9 +41,6 @@ header {
         text-align: left;
         color: rgba(29, 29, 27, 1);
     }
-    a {
-        text-decoration: none !important;
-    }
     .arrows svg path {
         fill: rgba(29, 29, 27, 1);
     }
@@ -72,7 +72,7 @@ header {
         width: 317px;
         height: 344px;
         top: 20px;
-        left: calc(50% - 700px/2 - 0.15px);
+        left: calc(50% - 690px/2 - 0.15px);
         background: rgba(255, 255, 255, 0,1);
         border-radius: 0px 0px 12px 12px;
         box-shadow: 0px 160px 129.12px 0px rgba(56, 45, 44, 0.1);
@@ -124,7 +124,8 @@ header {
         width: 364px;
         height: 426px;
         left: auto;
-        right: calc(50% - 1050px/2 - 0.15px);
+        right: calc(50% - 950px/2 - 0.15px);
+        top: -37px;
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
@@ -147,8 +148,8 @@ header {
         width: 307px;
         height: 255px;
         left: auto;
-        top: 180px;
-        right: calc(50% - 935px/2 - 0.15px);
+        top: 40px;
+        right: calc(50% - 837px/2 - 0.15px);
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
@@ -171,8 +172,8 @@ header {
         width: 313.6px;
         height: 131.2px;
         left: auto;
-        top: 230px;
-        right: calc(50% - 950px/2 - 0.15px);
+        top: 90px;
+        right: calc(50% - 850px/2 - 0.15px);
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
@@ -195,8 +196,8 @@ header {
         width: 335px;
         height: 110px;
         left: auto;
-        top: 265px;
-        right: calc(50% - 990px/2 - 0.15px);
+        top: 120px;
+        right: calc(50% - 893px/2 - 0.15px);
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
@@ -219,8 +220,8 @@ header {
         width: 368.8px;
         height: 89.6px;
         left: auto;
-        top: 358px;
-        right: calc(50% - 1060px/2 - 0.15px);
+        top: 215px;
+        right: calc(50% - 960px/2 - 0.15px);
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
@@ -242,7 +243,7 @@ header {
         width: 384px;
         height: 164px;
         left: auto;
-        right: calc(50% - 1170px/2 - 0.15px);
+        right: calc(50% - 690px/2 - 0.15px);
     }
     @media (max-width: 1150px) {
         .item-2 .services-tab-box {
@@ -259,22 +260,129 @@ header {
     }
 }
 footer {
-    .block-fon {
+    a:visited {
+        color: rgb(255, 255, 255);;
+    }
+    .block {
         width: 100%;
         height: 529px;
         background: rgb(29, 29, 27);
     }
-    .block {
-
-        width: 1113.71px;
-        height: 29.46px;
+    .question {
+        position: relative;
+        width: 220px;
+        height: 157.6px;
         left: calc(50% - 1113.71px/2 - 0.15px);
-        top: 70px; 
+        top: 60px;
     }
     @media (max-width: 1150px) {
         .block {
-            width: 800px;
             left: calc(50% - 800px/2 - 0.15px);
         }
+    }
+    .main-text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .question-text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13.6px;
+        line-height: 17px;
+        color: rgb(255, 255, 255);
+        vertical-align: middle;
+    }
+    .contacts {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        width: 199.8px;
+        height: 101px;
+        bottom: 0;
+    }
+    .contacts svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 7px;
+        vertical-align: middle;
+    }
+    .uslugi {
+        position: relative;
+        display: flex;
+        width: 871.6px;
+        height: 324.4px;
+        top: -97px;
+        left: calc(50% - 550px/2 - 0.15px);
+    }
+    .uslugi-2 {
+        position: absolute;
+        display: flex;
+        right: 0;
+        width: 577.2px;
+        height: 289px;
+    }
+    .poduslugi-1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        width: 274.4px;
+        height: 175px;
+    }
+    .poduslugi-2 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        width: 115px;
+        height: 138.4px;
+        bottom: 0;
+    }
+    .poduslugi-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        width: 303.4px;
+        height: 290.35px;
+    }
+    .poduslugi-4 {
+        display: flex;   
+        width: 253.8px;
+        height: 269.91px;
+    }
+    .poduslugi-5 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        width: 246.4px;
+        height: 179.95px;
+    }
+    .poduslugi-6 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        width: 252.8px;
+        height: 79px;
+        bottom: 0;
+    }
+    .uslugi-text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+    }
+    .prava {
+        position: relative;
+        text-align: center;
     }
 }
