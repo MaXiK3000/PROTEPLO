@@ -1,4 +1,10 @@
+html {
+    margin: 0;
+    padding: 0;
+}
 header {
+    width: auto;
+    height: 200px;
     .block {
         position: relative;
         width: 1113.71px;
@@ -60,12 +66,13 @@ header {
         cursor: pointer;
     }
     .services-tab-box {
+        cursor: auto;
         display: none;
-        position: fixed;
+        position: absolute;
         width: 317px;
         height: 344px;
-        margin-top: 10px;
-        left: calc(50% - 210px/2 - 0.15px);
+        top: 20px;
+        left: calc(50% - 700px/2 - 0.15px);
         background: rgba(255, 255, 255, 0,1);
         border-radius: 0px 0px 12px 12px;
         box-shadow: 0px 160px 129.12px 0px rgba(56, 45, 44, 0.1);
@@ -79,7 +86,7 @@ header {
         display: flex;
         position: absolute;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content:space-between;
         width: 261.63px;
         height: 272px;
         top: 0;
@@ -98,21 +105,176 @@ header {
         width: 100%;
     }
     .services-tab .item .arrows {
-        position: absolute;
-        cursor: auto;
-        right: 0;
+        position: absolute;     
+        right: 40px;
     }
-    .item-1:hover {
-        .services-tab-box {
-            display: flex;
+    .item-1:hover .services-tab-box {
+        display: flex;
+    }
+    .item-1:hover .services-tab-box .services-tab .item .vkladki-text:hover, .services-tab-box .services-tab .vkladki-text:hover {
+        color: rgba(122, 122, 122, 1);
+    }    
+    .item-1:hover .services-tab-box .services-tab .item:hover {
+        .arrows svg path {
+            fill: rgba(122, 122, 122, 1);
         }
-        a:hover, .item:hover {
-            .vkladki-text {
-                color: rgba(122, 122, 122, 1);
-            }
-            .arrows svg path {
-                fill: rgba(122, 122, 122, 1);
-            }
+    }
+    .services-tab .item-3 .services-tab-box {
+        display: none;
+        width: 364px;
+        height: 426px;
+        left: auto;
+        right: calc(50% - 1050px/2 - 0.15px);
+        filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
+        background: rgb(255, 255, 255);
+        border-radius: 12px;
+    }
+    .services-tab .item-3 .services-tab-box .services-tab {
+        width: 303.2px;
+        height: 356px;
+    }
+    .item-3:hover .services-tab-box {
+        display: flex;
+    }
+    @media (max-width: 1150px) {
+        .services-tab .item-3 .services-tab-box {
+            left: auto;
+            right: calc(50% - 730px/2 - 0.15px);
+        }
+    }
+    .services-tab .item-4 .services-tab-box {
+        display: none;
+        width: 307px;
+        height: 255px;
+        left: auto;
+        top: 180px;
+        right: calc(50% - 935px/2 - 0.15px);
+        filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
+        background: rgb(255, 255, 255);
+        border-radius: 12px;
+    }
+    .services-tab .item-4 .services-tab-box .services-tab {
+        width: 246.4px;
+        height: 186px;
+    }
+    .item-4:hover .services-tab-box {
+        display: flex;
+    }
+    @media (max-width: 1150px) {
+        .services-tab .item-4 .services-tab-box {
+            left: auto;
+            right: calc(50% - 615px/2 - 0.15px);
+        }
+    }
+    .services-tab .item-5 .services-tab-box {
+        display: none;
+        width: 313.6px;
+        height: 131.2px;
+        left: auto;
+        top: 230px;
+        right: calc(50% - 950px/2 - 0.15px);
+        filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
+        background: rgb(255, 255, 255);
+        border-radius: 12px;
+    }
+    .services-tab .item-5 .services-tab-box .services-tab {
+        width: 252.8px;
+        height: 61.6px;
+    }
+    .item-5:hover .services-tab-box {
+        display: flex;
+    }
+    @media (max-width: 1150px) {
+        .services-tab .item-5 .services-tab-box {
+            left: auto;
+            right: calc(50% - 630px/2 - 0.15px);
+        }
+    }
+    .services-tab .item-6 .services-tab-box {
+        display: none;
+        width: 335px;
+        height: 110px;
+        left: auto;
+        top: 265px;
+        right: calc(50% - 990px/2 - 0.15px);
+        filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
+        background: rgb(255, 255, 255);
+        border-radius: 12px;
+    }
+    .services-tab .item-6 .services-tab-box .services-tab {
+        width: 274.4px;
+        height: 40px;
+    }
+    .item-6:hover .services-tab-box {
+        display: flex;
+    }
+    @media (max-width: 1150px) {
+        .services-tab .item-6 .services-tab-box {
+            left: auto;
+            right: calc(50% - 670px/2 - 0.15px);
+        }
+    }
+    .services-tab .item-7 .services-tab-box {
+        display: none;
+        width: 368.8px;
+        height: 89.6px;
+        left: auto;
+        top: 358px;
+        right: calc(50% - 1060px/2 - 0.15px);
+        filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
+        background: rgb(255, 255, 255);
+        border-radius: 12px;
+    }
+    .services-tab .item-7 .services-tab-box .services-tab {
+        width: 308px;
+        height: 20px;
+    }
+    .item-7:hover .services-tab-box {
+        display: flex;
+    }
+    @media (max-width: 1150px) {
+        .services-tab .item-7 .services-tab-box {
+            left: auto;
+            right: calc(50% - 670px/2 - 0.15px);
+        }
+    }
+    .item-2 .services-tab-box {
+        width: 384px;
+        height: 164px;
+        left: auto;
+        right: calc(50% - 1170px/2 - 0.15px);
+    }
+    @media (max-width: 1150px) {
+        .item-2 .services-tab-box {
+            left: auto;
+            right: calc(50% - 855px/2 - 0.15px);
+        }
+    }
+    .item-2 .services-tab-box .services-tab {
+        width: 323.2px;
+        height: 103.2px;
+    }
+    .item-2:hover .services-tab-box {
+        display: flex;
+    }
+}
+footer {
+    .block-fon {
+        width: 100%;
+        height: 529px;
+        background: rgb(29, 29, 27);
+    }
+    .block {
+
+        width: 1113.71px;
+        height: 29.46px;
+        left: calc(50% - 1113.71px/2 - 0.15px);
+        top: 70px; 
+    }
+    @media (max-width: 1150px) {
+        .block {
+            width: 800px;
+            left: calc(50% - 800px/2 - 0.15px);
         }
     }
 }
