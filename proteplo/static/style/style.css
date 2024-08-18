@@ -1,37 +1,47 @@
 html {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     a {
         text-decoration: none !important;
     }
 }
 header {
     width: auto;
-    height: 200px;
+    height: 240px;
     .block {
         position: relative;
-        width: 1113.71px;
-        height: 29.46px;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        width: calc(100% - (50% - 1113.71px/2 - 0.15px) * 2);
+        height: 63.54px;
         left: calc(50% - 1113.71px/2 - 0.15px);
-        top: 70px; 
+        top: 49px; 
     }
     @media (max-width: 1150px) {
         .block {
-            width: 800px;
-            left: calc(50% - 800px/2 - 0.15px);
+            width: 950px;
+            left: calc(50% - 950px/2 - 0.15px);
         }
     }
     .logo {
+        display: flex;
         position: absolute;
-        width: 129.79px;
-        height: 29.46px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 238px;
+        height: 63.54px;
     }
     .vkladki {
+        white-space: nowrap;
+        display: flex;
         position: absolute;
+        width: 696.71px;
         height: 20.7px;
         right: 0;
-        margin-top: 6px;
-        display: inline-block;
+        flex-direction: row;
+        justify-content: space-between;
     }
     .vkladki-text {
         font-family: Montserrat;
@@ -61,21 +71,25 @@ header {
     .item {
         display: flex;
         float: left;
-        margin-right: 50px;
         height: 20.7px;
         cursor: pointer;
     }
     .services-tab-box {
         cursor: auto;
-        display: none;
+        /* display: none; */
+        display: flex;
+        pointer-events: none;
+        z-index: 1;
         position: absolute;
         width: 317px;
         height: 344px;
         top: 20px;
-        left: calc(50% - 690px/2 - 0.15px);
-        background: rgba(255, 255, 255, 0,1);
+        left: calc(50% - 755px/2 - 0.15px);
+        background: rgba(255, 255, 255);
         border-radius: 0px 0px 12px 12px;
         box-shadow: 0px 160px 129.12px 0px rgba(56, 45, 44, 0.1);
+        transition: 0.5s;
+        opacity: 0;
     }
     @media (max-width: 1150px) {
         .services-tab-box {
@@ -84,7 +98,7 @@ header {
     }
     .services-tab {
         display: flex;
-        position: absolute;
+        position: relative;
         flex-direction: column;
         justify-content:space-between;
         width: 261.63px;
@@ -109,7 +123,9 @@ header {
         right: 40px;
     }
     .item-1:hover .services-tab-box {
-        display: flex;
+        /* display: flex; */
+        pointer-events: all;
+        opacity: 1;
     }
     .item-1:hover .services-tab-box .services-tab .item .vkladki-text:hover, .services-tab-box .services-tab .vkladki-text:hover {
         color: rgba(122, 122, 122, 1);
@@ -120,7 +136,9 @@ header {
         }
     }
     .services-tab .item-3 .services-tab-box {
-        display: none;
+        /* display: none; */
+        display: flex;
+        pointer-events: none;
         width: 364px;
         height: 426px;
         left: auto;
@@ -129,13 +147,17 @@ header {
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
+        transition: 0.5s;
+        opacity: 0;
     }
     .services-tab .item-3 .services-tab-box .services-tab {
         width: 303.2px;
         height: 356px;
     }
     .item-3:hover .services-tab-box {
-        display: flex;
+        /* display: flex; */
+        pointer-events: all;
+        opacity: 1;
     }
     @media (max-width: 1150px) {
         .services-tab .item-3 .services-tab-box {
@@ -144,7 +166,9 @@ header {
         }
     }
     .services-tab .item-4 .services-tab-box {
-        display: none;
+        /* display: none; */
+        display: flex;
+        pointer-events: none;
         width: 307px;
         height: 255px;
         left: auto;
@@ -153,13 +177,17 @@ header {
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
+        transition: 0.5s;
+        opacity: 0;
     }
     .services-tab .item-4 .services-tab-box .services-tab {
         width: 246.4px;
         height: 186px;
     }
     .item-4:hover .services-tab-box {
-        display: flex;
+        /* display: flex; */
+        pointer-events: all;
+        opacity: 1;
     }
     @media (max-width: 1150px) {
         .services-tab .item-4 .services-tab-box {
@@ -168,7 +196,9 @@ header {
         }
     }
     .services-tab .item-5 .services-tab-box {
-        display: none;
+        /* display: none; */
+        display: flex;
+        pointer-events: none;
         width: 313.6px;
         height: 131.2px;
         left: auto;
@@ -177,13 +207,17 @@ header {
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
+        transition: 0.5s;
+        opacity: 0;
     }
     .services-tab .item-5 .services-tab-box .services-tab {
         width: 252.8px;
         height: 61.6px;
     }
     .item-5:hover .services-tab-box {
-        display: flex;
+        /* display: flex; */
+        pointer-events: all;
+        opacity: 1;
     }
     @media (max-width: 1150px) {
         .services-tab .item-5 .services-tab-box {
@@ -192,7 +226,9 @@ header {
         }
     }
     .services-tab .item-6 .services-tab-box {
-        display: none;
+        /* display: none; */
+        display: flex;
+        pointer-events: none;
         width: 335px;
         height: 110px;
         left: auto;
@@ -201,13 +237,17 @@ header {
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
+        transition: 0.5s;
+        opacity: 0;
     }
     .services-tab .item-6 .services-tab-box .services-tab {
         width: 274.4px;
         height: 40px;
     }
     .item-6:hover .services-tab-box {
-        display: flex;
+        /* display: flex; */
+        pointer-events: all;
+        opacity: 1;
     }
     @media (max-width: 1150px) {
         .services-tab .item-6 .services-tab-box {
@@ -216,7 +256,8 @@ header {
         }
     }
     .services-tab .item-7 .services-tab-box {
-        display: none;
+        /* display: none; */
+        pointer-events: none;
         width: 368.8px;
         height: 89.6px;
         left: auto;
@@ -225,13 +266,17 @@ header {
         filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
         background: rgb(255, 255, 255);
         border-radius: 12px;
+        transition: 0.5s;
+        opacity: 0;
     }
     .services-tab .item-7 .services-tab-box .services-tab {
         width: 308px;
         height: 20px;
     }
     .item-7:hover .services-tab-box {
-        display: flex;
+        /* display: flex; */
+        pointer-events: all;
+        opacity: 1;
     }
     @media (max-width: 1150px) {
         .services-tab .item-7 .services-tab-box {
@@ -243,7 +288,10 @@ header {
         width: 384px;
         height: 164px;
         left: auto;
-        right: calc(50% - 690px/2 - 0.15px);
+        right: calc(50% - 675px/2 - 0.15px);
+        pointer-events: none;
+        transition: 0.5s;
+        opacity: 0;
     }
     @media (max-width: 1150px) {
         .item-2 .services-tab-box {
@@ -256,17 +304,21 @@ header {
         height: 103.2px;
     }
     .item-2:hover .services-tab-box {
-        display: flex;
+        /* display: flex; */
+        pointer-events: all;
+        opacity: 1;
     }
 }
 footer {
-    a:visited {
-        color: rgb(255, 255, 255);;
-    }
     .block {
+        position: relative;
+        top: 300px;
         width: 100%;
         height: 529px;
         background: rgb(29, 29, 27);
+    }
+    .main-text:hover, .uslugi-text:hover {
+        color: rgba(122, 122, 122, 1);
     }
     .question {
         position: relative;
@@ -302,8 +354,8 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content:space-between;
-        width: 199.8px;
-        height: 101px;
+        width: 210px;
+        height: 110px;
         bottom: 0;
     }
     .contacts svg {
@@ -347,7 +399,7 @@ footer {
     .poduslugi-3 {
         display: flex;
         flex-direction: column;
-        justify-content:space-between;
+        justify-content: space-between;
         width: 303.4px;
         height: 290.35px;
     }
@@ -360,7 +412,7 @@ footer {
         position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content:space-between;
+        justify-content: space-between;
         width: 246.4px;
         height: 179.95px;
     }
@@ -368,7 +420,7 @@ footer {
         position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content:space-between;
+        justify-content: space-between;
         width: 252.8px;
         height: 79px;
         bottom: 0;
@@ -379,10 +431,138 @@ footer {
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
-        color: #FFFFFF;
+        color: rgb(255, 255, 255);
     }
     .prava {
         position: relative;
         text-align: center;
+    }
+}
+body {
+    .main-block {
+        position: relative;
+        width: 1119.2px;
+        height: 592px;
+        margin-left: calc(50% - 1119.2px/2 - 0.4px);
+        .lutchie {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 52px;
+            line-height: 63px;
+            text-transform: uppercase;
+            color: rgb(232, 67, 50);
+        }
+        .lutchie span {
+            color: rgb(0, 0, 0);
+        }
+        .lutchie-text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: rgb(29, 29, 27);
+        }
+        .buttons {
+            display: flex;
+            width: 479.4px;
+            height: 58.4px;
+            margin-top: 60.8px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .button-1 {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 18px 25px;
+            gap: 10px;
+            width: 276px;
+            height: 57px;
+            background: rgb(232, 67, 50);
+            border-radius: 112px;
+            transition: 0.3s;
+        }
+        .button-1:hover {
+            border: 1.6px solid rgb(232, 67, 50);
+            background: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+        .button-1 .text {
+            width: 226px;
+            height: 21px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17.6px;
+            line-height: 21px;
+            color: rgb(255, 255, 255);
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            transition: 0.3s;
+        }
+        .button-1:hover .text {
+            color: rgb(232, 67, 50);
+        }
+        .button-2 {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 18px 25px;
+            gap: 10px;
+            width: 171px;
+            height: 57px;
+            border: 1.6px solid rgb(232, 67, 50);
+            border-radius: 112px;
+            transition: 0.3s;
+        }
+        .button-2:hover {
+            border: 0;
+            background: rgb(232, 67, 50);
+            cursor: pointer;
+        }
+        .button-2 .text {
+            width: 121px;
+            height: 21px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17.6px;
+            line-height: 21px;
+            color: #E84332;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            transition: 0.3s;
+        }
+        .button-2:hover .text {
+            color: rgb(255, 255, 255);
+        }
+        .image-block {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            right: 0;
+            width: 572px;
+            height: 468.8px;
+            filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
+            .circle {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+    .arrow {
+        display: flex;
+        margin-top: 63px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
