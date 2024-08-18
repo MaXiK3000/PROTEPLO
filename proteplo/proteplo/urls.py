@@ -20,5 +20,5 @@ from proteplo_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^', views.header),
+    re_path(r'^', views.main),
 ]
