@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    margin-top: 200px;
+    .buy-call {
+        display: flex;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.35);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: 0.5s;
+        opacity: 0;
+        pointer-events: none;
+        .block-call {
+            display: block;
+            width: 631px;
+            height: 570px;
+            margin-top: 122px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgb(255, 255, 255);
+            border-radius: 16px;
+            .block-call-title {
+                display: flex;
+                width: max-content;
+                height: min-content;
+                margin-top: 58px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .block-call-title span {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 49px;
+                text-align: center;
+                text-transform: uppercase;
+                color: rgb(29, 29, 27);
+            }
+            .input-block {
+                display: grid;
+                margin-left: auto;
+                margin-right: auto;
+                width: 463px;
+            }
+            input {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                border: 0;
+                padding: 0;
+                width: 427px;
+                height: 44px;
+                background: rgb(245, 245, 245);
+                border-radius: 10px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+            }
+            input::placeholder {
+                color: rgb(122, 122, 122);
+            }
+            input:disabled {
+                border-color: #E84332;
+            }
+            input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            input[type=text] {
+                padding: 0 18px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: rgba(0, 0, 0, 1)
+            }
+            input[type=number] {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 0 0 0 14px;
+                width: 30px;
+            }
+            input[type=tel] {
+                padding: 0 18px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: rgba(0, 0, 0, 1)
+            }
+            .block-call-text {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: rgb(29, 29, 27);
+            }
+            .clock {
+                display: flex;
+                align-items: center;
+                width: 103px;
+                justify-content: space-between;
+                margin-top: 10px;
+            }
+            .button-1 {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 20px;
+                margin-top: 35px;
+                margin-left: 84.5px;
+                gap: 10px;
+                width: 131px;
+                height: 50px;
+                background: rgb(255, 255, 255);
+                border: 1.6px solid rgb(232, 67, 50);
+                border-radius: 112px;
+                transition: 0.3s;
+            }
+            .button-1:hover {
+                border: 0;
+                background: rgb(232, 67, 50);
+                cursor: pointer;
+            }
+            .button-1 .text {
+                width: 121px;
+                height: 21px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 17.6px;
+                line-height: 21px;
+                color: rgb(232, 67, 50);
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                transition: 0.3s;
+            }
+            .button-1:hover .text {
+                color: rgb(255, 255, 255);
+            }
+        }
+        .block-call:hover {
+            .buy-call {
+                pointer-events: none;
+            }
+        }
+    }
+    .contacts-block {
+        display: block;
+        /* text-align: center; */
+        .title {
+            text-align: center;
+        }
+        .title span {
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 49px;
+            text-transform: uppercase;
+            color: rgb(29, 29, 27);
+        }
+        .contacts-text {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 22.2px;
+            width: 655px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: rgb(29, 29, 27);
+        }
+        .contacts-info {
+            display: flex;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1031px;
+            height: 343px;
+        }
+        .contacts-info-block {
+            display: flex;
+            margin-top: 43px;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 295px;
+            height: 147.2px;
+        }
+        .contacts-info-block svg {
+            width: 25px;
+            height: 25px;
+            margin-right: 7px;
+            vertical-align: middle;
+        }
+        .contacts-info-block .question-text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: rgb(29, 29, 27);
+        }
+        .button-1 {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 18px 25px;
+            gap: 10px;
+            width: 202px;
+            height: 57px;
+            background: rgb(232, 67, 50);
+            border-radius: 112px; 
+            transition: 0.3s;
+            margin-top: 44.8px;
+        }
+        .button-1:hover {
+            border: 1.6px solid rgb(232, 67, 50);
+            background: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+        .button-1 .text {
+            width: 152px;
+            height: 21px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17.6px;
+            line-height: 21px;
+            color: rgb(255, 255, 255);
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            transition: 0.3s;
+        }
+        .button-1:hover .text {
+            color: rgb(232, 67, 50);
+        }
+        .map {
+            position: absolute;
+            width: 611px;
+            height: 343px;
+            background: rgb(217, 217, 217);
+            border-radius: 16px;
+            right: 0;
+        }
+        .map ymaps {
+            border-radius: 16px;
+        }
+    }
+}
+header {
+    .item-10 .vkladki-text {
+        color: rgba(122, 122, 122, 1);
+    }
+}

@@ -1,0 +1,248 @@
+{% extends 'header.html' %}
+{% block title %} Отзывы{% endblock %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/reviews.css' %}">
+{% endblock %}
+{% block content %}
+<div class="buy-call" id="buy-call">
+    <div class="block-call" id="block-call">
+        <form method="post">
+            {% csrf_token %}
+            <div class="block-call-title">
+                <span>Отправьте нам свой отзыв</span>
+            </div>
+            <div class="progress-bar" style="margin-top: 51px; margin-left: 85px;">
+                <input type="number" id="star" class="star" name="value" required>
+                <svg class="progress-bar-empty" width="120" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <path id="1-star" fill="#E84332" d="m12.0006,18.26l-7.05345,3.9482l1.57533,-7.9283l-5.93459,-5.4881l8.02704,-0.95174l3.38567,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.03846,4.41932l-4.83293,0.57306l3.5731,3.3043l-0.94848,4.7734l4.24677,-2.3771z"/>
+                    <path id="2-star" fill="#E84332" d="m36.0006,18.26l-7.0535,3.9482l1.5754,-7.9283l-5.9346,-5.4881l8.027,-0.95174l3.3857,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.0385,4.41932l-4.8329,0.57306l3.5731,3.3043l-0.9485,4.7734l4.2468,-2.3771z"/>
+                    <path id="3-star" fill="#E84332" d="m60.0006,18.26l-7.0535,3.9482l1.5754,-7.9283l-5.9346,-5.4881l8.027,-0.95174l3.3857,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.0385,4.41932l-4.8329,0.57306l3.5731,3.3043l-0.9485,4.7734l4.2468,-2.3771z"/>
+                    <path id="4-star" fill="#E84332" d="m84.0006,18.26l-7.0535,3.9482l1.5754,-7.9283l-5.9346,-5.4881l8.027,-0.95174l3.3857,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.0385,4.41932l-4.8329,0.57306l3.5731,3.3043l-0.9485,4.7734l4.2468,-2.3771z"/>
+                    <path id="5-star" fill="#E84332" d="m108.001,18.26l-7.054,3.9482l1.575,-7.9283l-5.9341,-5.4881l8.0271,-0.95174l3.386,-7.34006l3.385,7.34006l8.027,0.95174l-5.934,5.4881l1.575,7.9283l-7.053,-3.9482zm0,-2.292l4.246,2.3771l-0.948,-4.7734l3.573,-3.3043l-4.833,-0.57306l-2.038,-4.41932l-2.039,4.41932l-4.833,0.57306l3.573,3.3043l-0.948,4.7734l4.247,-2.3771z"/>
+                    <svg class="progress-bar-fill" width="0%" height="24" xmlns="http://www.w3.org/2000/svg" class="progress-bar-fill">
+                        <path id="11-star" fill="#E84332" d="m12.05285,18.4602l-7.05349,3.9482l1.57533,-7.9283l-5.93459,-5.4881l8.02704,-0.95174l3.38571,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                        <path id="22-star" fill="#E84332" d="m36.05285,18.4602l-7.0535,3.9482l1.5753,-7.9283l-5.9346,-5.4881l8.0271,-0.95174l3.3857,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                        <path id="33-star" fill="#E84332" d="m60.05285,18.4602l-7.0535,3.9482l1.5753,-7.9283l-5.9346,-5.4881l8.0271,-0.95174l3.3857,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                        <path id="44-star" fill="#E84332" d="m84.05265,18.4602l-7.0534,3.9482l1.5753,-7.9283l-5.9346,-5.4881l8.0271,-0.95174l3.3856,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                        <path id="55-star" fill="#E84332" d="m108.05305,18.4602l-7.054,3.9482l1.576,-7.9283l-5.9351,-5.4881l8.0271,-0.95174l3.386,-7.34007l3.385,7.34007l8.027,0.95174l-5.934,5.4881l1.575,7.9283l-7.053,-3.9482z"/>
+                    </svg>
+                </svg>                                                                                         
+            </div>
+            <div class="input-block">
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required style="margin-top: 24px;"/>
+                <input type="text" id="title" name="title" placeholder="Заголовок" required style="margin-top: 21px;"/>
+                <input type="text" id="review" name="review" placeholder="Ваш отзыв" required style="margin-top: 21px;"/>        
+            </div> 
+            <button type="submit" class="button-1" id="call" name="Call">
+                <span class="text">Отправить</span>
+            </button>
+            
+        </form>
+    </div>
+</div>
+<div class="reviews-block">
+    <div class="title">
+        <span>Отзывы наших клиентов</span>
+    </div>
+    <div class="reviews-text">
+        <span>Наши клиенты ценят качество и надежность наших услуг. 
+            Ознакомьтесь с отзывами, чтобы узнать, что они думают о 
+            работе с нами. Мы всегда рады получать обратную связь и 
+            стремимся к постоянному улучшению.
+        </span>
+    </div>
+    <div class="reviews">
+        <div class="reviews-section">
+            <div class="average">
+                <span class="reviews-value">{{star_avr | floatformat:1}}</span>
+                <div class="progress-bar">
+                    <svg class="progress-bar-empty" width="120" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#E84332" d="m12.0006,18.26l-7.05345,3.9482l1.57533,-7.9283l-5.93459,-5.4881l8.02704,-0.95174l3.38567,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.03846,4.41932l-4.83293,0.57306l3.5731,3.3043l-0.94848,4.7734l4.24677,-2.3771z"/>
+                        <path fill="#E84332" d="m36.0006,18.26l-7.0535,3.9482l1.5754,-7.9283l-5.9346,-5.4881l8.027,-0.95174l3.3857,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.0385,4.41932l-4.8329,0.57306l3.5731,3.3043l-0.9485,4.7734l4.2468,-2.3771z"/>
+                        <path fill="#E84332" d="m60.0006,18.26l-7.0535,3.9482l1.5754,-7.9283l-5.9346,-5.4881l8.027,-0.95174l3.3857,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.0385,4.41932l-4.8329,0.57306l3.5731,3.3043l-0.9485,4.7734l4.2468,-2.3771z"/>
+                        <path fill="#E84332" d="m84.0006,18.26l-7.0535,3.9482l1.5754,-7.9283l-5.9346,-5.4881l8.027,-0.95174l3.3857,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.0385,4.41932l-4.8329,0.57306l3.5731,3.3043l-0.9485,4.7734l4.2468,-2.3771z"/>
+                        <path fill="#E84332" d="m108.001,18.26l-7.054,3.9482l1.575,-7.9283l-5.9341,-5.4881l8.0271,-0.95174l3.386,-7.34006l3.385,7.34006l8.027,0.95174l-5.934,5.4881l1.575,7.9283l-7.053,-3.9482zm0,-2.292l4.246,2.3771l-0.948,-4.7734l3.573,-3.3043l-4.833,-0.57306l-2.038,-4.41932l-2.039,4.41932l-4.833,0.57306l3.573,3.3043l-0.948,4.7734l4.247,-2.3771z"/>
+                        <svg class="progress-bar-fill" width="0" height="24" xmlns="http://www.w3.org/2000/svg" class="progress-bar-fill">
+                            <path fill="#E84332" d="m12.05285,18.4602l-7.05349,3.9482l1.57533,-7.9283l-5.93459,-5.4881l8.02704,-0.95174l3.38571,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                            <path fill="#E84332" d="m36.05285,18.4602l-7.0535,3.9482l1.5753,-7.9283l-5.9346,-5.4881l8.0271,-0.95174l3.3857,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                            <path fill="#E84332" d="m60.05285,18.4602l-7.0535,3.9482l1.5753,-7.9283l-5.9346,-5.4881l8.0271,-0.95174l3.3857,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                            <path fill="#E84332" d="m84.05265,18.4602l-7.0534,3.9482l1.5753,-7.9283l-5.9346,-5.4881l8.0271,-0.95174l3.3856,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                            <path fill="#E84332" d="m108.05305,18.4602l-7.054,3.9482l1.576,-7.9283l-5.9351,-5.4881l8.0271,-0.95174l3.386,-7.34007l3.385,7.34007l8.027,0.95174l-5.934,5.4881l1.575,7.9283l-7.053,-3.9482z"/>
+                            <animate attributeName="width" from="0" to="{% widthratio star_avr 5 100 %}%" dur="0.7s" calcMode="spline" keySplines="0.42 0 0.58 1" keyTimes="0;1" fill="freeze" />
+                        </svg>
+                    </svg>                                                                                         
+                </div>
+            </div>
+            <div class="great review-bar" style="margin-top: 20px;">
+                <span class="bar-text">Отлично</span>
+                <div class="bar">
+                    <svg width="177" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#D9D9D9"/>
+                        <svg width="0" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#E84332"/>
+                            <animate attributeName="width" from="0" to="{% widthratio star_5 star_all 100 %}%" dur="0.7s" calcMode="spline" keySplines="0.42 0 0.58 1" keyTimes="0;1" fill="freeze" />
+                        </svg>                            
+                    </svg>                        
+                </div>
+                <span class="bar-value">{{star_5}}</span>
+            </div>
+            <div class="good review-bar">
+                <span class="bar-text">Хорошо</span>
+                <div class="bar">
+                    <svg width="177" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#D9D9D9"/>
+                        <svg width="0" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#E84332"/>
+                            <animate attributeName="width" from="0" to="{% widthratio star_4 star_all 100 %}%" dur="0.7s" calcMode="spline" keySplines="0.42 0 0.58 1" keyTimes="0;1" fill="freeze" />
+                        </svg>                            
+                    </svg>                        
+                </div>
+                <span class="bar-value">{{star_4}}</span>
+            </div>
+            <div class="middle review-bar">
+                <span class="bar-text">Средне</span>
+                <div class="bar">
+                    <svg width="177" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#D9D9D9"/>
+                        <svg width="0" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#E84332"/>
+                            <animate attributeName="width" from="0" to="{% widthratio star_3 star_all 100 %}%" dur="0.7s" calcMode="spline" keySplines="0.42 0 0.58 1" keyTimes="0;1" fill="freeze" />
+                        </svg>                            
+                    </svg>                        
+                </div>
+                <span class="bar-value">{{star_3}}</span>
+            </div>
+            <div class="bad review-bar">
+                <span class="bar-text">Плохо</span>
+                <div class="bar">
+                    <svg width="177" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#D9D9D9"/>
+                        <svg width="0" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#E84332"/>
+                            <animate attributeName="width" from="0" to="{% widthratio star_2 star_all 100 %}%" dur="0.7s" calcMode="spline" keySplines="0.42 0 0.58 1" keyTimes="0;1" fill="freeze" />
+                        </svg>                            
+                    </svg>                        
+                </div>
+                <span class="bar-value">{{star_2}}</span>
+            </div>
+            <div class="terrible review-bar">
+                <span class="bar-text">Ужасно</span>
+                <div class="bar">
+                    <svg width="177" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#D9D9D9"/>
+                        <svg width="0" height="17.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.600098" width="176" height="17.6" rx="8.8" fill="#E84332"/>
+                            <animate attributeName="width" from="0" to="{% widthratio star_1 star_all 100 %}%" dur="0.7s" calcMode="spline" keySplines="0.42 0 0.58 1" keyTimes="0;1" fill="freeze" />
+                        </svg>                            
+                    </svg>                        
+                </div>
+                <span class="bar-value">{{star_1}}</span>
+            </div>
+        </div>
+        <div class="make-request">
+            <div class="podblock-make-request">
+                <span>Мы будем рады, если Вы оставите свой отзыв!</span>
+            </div>
+            <div class="button-1">
+                <span class="text">Добавить отзыв</span>
+            </div>
+        </div>
+    </div>
+    <div class="reviews-blocks">
+        {% for review in reviews reversed %}
+        <div class="review-block">
+            <div class="name">
+                <span>{{ review.name }}</span>
+            </div>
+            <div class="progress-bar">
+                <svg style="margin-left: 30px; margin-top: 5px" class="progress-bar-empty" width="120" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#E84332" d="m12.0006,18.26l-7.05345,3.9482l1.57533,-7.9283l-5.93459,-5.4881l8.02704,-0.95174l3.38567,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.03846,4.41932l-4.83293,0.57306l3.5731,3.3043l-0.94848,4.7734l4.24677,-2.3771z"/>
+                    <path fill="#E84332" d="m36.0006,18.26l-7.0535,3.9482l1.5754,-7.9283l-5.9346,-5.4881l8.027,-0.95174l3.3857,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.0385,4.41932l-4.8329,0.57306l3.5731,3.3043l-0.9485,4.7734l4.2468,-2.3771z"/>
+                    <path fill="#E84332" d="m60.0006,18.26l-7.0535,3.9482l1.5754,-7.9283l-5.9346,-5.4881l8.027,-0.95174l3.3857,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.0385,4.41932l-4.8329,0.57306l3.5731,3.3043l-0.9485,4.7734l4.2468,-2.3771z"/>
+                    <path fill="#E84332" d="m84.0006,18.26l-7.0535,3.9482l1.5754,-7.9283l-5.9346,-5.4881l8.027,-0.95174l3.3857,-7.34006l3.3856,7.34006l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482zm0,-2.292l4.2467,2.3771l-0.9485,-4.7734l3.5731,-3.3043l-4.8329,-0.57306l-2.0384,-4.41932l-2.0385,4.41932l-4.8329,0.57306l3.5731,3.3043l-0.9485,4.7734l4.2468,-2.3771z"/>
+                    <path fill="#E84332" d="m108.001,18.26l-7.054,3.9482l1.575,-7.9283l-5.9341,-5.4881l8.0271,-0.95174l3.386,-7.34006l3.385,7.34006l8.027,0.95174l-5.934,5.4881l1.575,7.9283l-7.053,-3.9482zm0,-2.292l4.246,2.3771l-0.948,-4.7734l3.573,-3.3043l-4.833,-0.57306l-2.038,-4.41932l-2.039,4.41932l-4.833,0.57306l3.573,3.3043l-0.948,4.7734l4.247,-2.3771z"/>
+                    <svg class="progress-bar-fill" width="{% widthratio review.value 5 100 %}%" height="24" xmlns="http://www.w3.org/2000/svg" class="progress-bar-fill">
+                        <path fill="#E84332" d="m12.05285,18.4602l-7.05349,3.9482l1.57533,-7.9283l-5.93459,-5.4881l8.02704,-0.95174l3.38571,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                        <path fill="#E84332" d="m36.05285,18.4602l-7.0535,3.9482l1.5753,-7.9283l-5.9346,-5.4881l8.0271,-0.95174l3.3857,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                        <path fill="#E84332" d="m60.05285,18.4602l-7.0535,3.9482l1.5753,-7.9283l-5.9346,-5.4881l8.0271,-0.95174l3.3857,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                        <path fill="#E84332" d="m84.05265,18.4602l-7.0534,3.9482l1.5753,-7.9283l-5.9346,-5.4881l8.0271,-0.95174l3.3856,-7.34007l3.3856,7.34007l8.027,0.95174l-5.9345,5.4881l1.5753,7.9283l-7.0534,-3.9482z"/>
+                        <path fill="#E84332" d="m108.05305,18.4602l-7.054,3.9482l1.576,-7.9283l-5.9351,-5.4881l8.0271,-0.95174l3.386,-7.34007l3.385,7.34007l8.027,0.95174l-5.934,5.4881l1.575,7.9283l-7.053,-3.9482z"/>
+                    </svg>
+                </svg>                                                                                         
+            </div>
+            <div class="review-title">
+                <span>{{review.title}}</span>
+            </div>
+            <div class="review-text">
+                <span>{{review.review}}</span>
+            </div>
+        </div>
+        {% endfor %} 
+    </div>
+</div>
+<script>
+    // value = 2.5;
+    // document.getElementsByClassName('progress-bar-fill')[0].setAttribute('width', ((value * 120) / 5));
+    var value = '0%';
+    document.getElementById('11-star').addEventListener('click', function() {
+        value = '20%';
+        document.getElementById('star').setAttribute('value', 1);
+    });
+    document.getElementById('22-star').addEventListener('click', function() {
+        value = '40%';
+        document.getElementById('star').setAttribute('value', 2);
+    });
+    document.getElementById('33-star').addEventListener('click', function() {
+        value = '60%';
+        document.getElementById('star').setAttribute('value', 3);
+    });
+    document.getElementById('44-star').addEventListener('click', function() {
+        value = '80%';
+        document.getElementById('star').setAttribute('value', 4);
+    });
+    document.getElementById('55-star').addEventListener('click', function() {
+        value = '100%';
+        document.getElementById('star').setAttribute('value', 5);
+    });
+    document.getElementById('1-star').addEventListener("mouseover", function() {
+        document.getElementsByClassName('progress-bar-fill')[0].setAttribute('width', '20%')
+    });
+    document.getElementById('2-star').addEventListener("mouseover", function() {
+        document.getElementsByClassName('progress-bar-fill')[0].setAttribute('width', '40%')
+    });
+    document.getElementById('3-star').addEventListener("mouseover", function() {
+        document.getElementsByClassName('progress-bar-fill')[0].setAttribute('width', '60%')
+    });
+    document.getElementById('4-star').addEventListener("mouseover", function() {
+        document.getElementsByClassName('progress-bar-fill')[0].setAttribute('width', '80%')
+    });
+    document.getElementById('5-star').addEventListener("mouseover", function() {
+        document.getElementsByClassName('progress-bar-fill')[0].setAttribute('width', '100%')
+    });
+    document.getElementsByClassName('progress-bar-fill')[0].addEventListener("mouseout", function() {
+        document.getElementsByClassName('progress-bar-fill')[0].setAttribute('width', value)        
+    });
+
+    document.getElementsByClassName('button-1')[1].addEventListener('click', function() {
+        document.getElementById('buy-call').style.opacity = 1;
+        document.getElementById('buy-call').style.pointerEvents = 'all';
+    });
+
+    let flag = false;
+
+    document.getElementById('block-call').addEventListener("mouseout", function() {
+        flag = true;
+    });
+    document.getElementById('block-call').addEventListener("mouseover", function() {
+        flag = false;
+    });
+    
+    document.getElementById('buy-call').addEventListener('click', function() {
+        if (flag == true) {
+        document.getElementById('buy-call').style.opacity = 0;
+        document.getElementById('buy-call').style.pointerEvents = 'none';
+        }     
+    });
+</script>
+{% endblock %}

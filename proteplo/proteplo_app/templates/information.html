@@ -1,0 +1,19 @@
+{% extends 'header.html' %}
+{% block title %} {{ information.title }}{% endblock %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/information.css' %}">
+{% endblock %}
+{% block content %}
+<div class="information-block">
+    <div class="title">
+        <span>{{ information.title }}</span>
+    </div>
+    <div class="information-text p0">
+        <span>{{ information.main_text | safe}}</span>
+    </div>
+    <div class="information-text" style="border-left: none; margin-top: 0;">
+        <span>{{ information.text | safe}}</span>
+    </div>
+</div>
+{% endblock %}

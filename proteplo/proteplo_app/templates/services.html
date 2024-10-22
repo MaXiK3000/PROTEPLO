@@ -1,0 +1,319 @@
+{% extends 'header.html' %}
+{% block title %} Услуги{% endblock %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/services.css' %}">
+{% endblock %}
+{% block content %}
+<div class="services-block">
+    <div class="title">
+        <span>Каталог услуг</span>
+    </div>
+    <div class="services-text">
+        <span>Мы предлагаем широкий спектр услуг по монтажу и 
+            обслуживанию систем отопления, вентиляции, водопровода и канализации. 
+            Наша команда профессионалов гарантирует высокое качество работ и 
+            индивидуальный подход к каждому клиенту.
+        </span>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Вентиляция.png' %}">
+        <div class="service-info">
+            <span><strong>Вентиляция</strong>
+            <p>Вентиляция в жилых и коммерческих помещениях 
+                обеспечивает свежий воздух и оптимальный 
+                микроклимат. Услуга включает в себя разработку 
+                индивидуального проекта с учетом всех особенностей помещения
+                и установку вентиляционного оборудования.</p>
+            </span>
+            <a href="/services/ventilation" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Гидравлические_испытания.png' %}">
+        <div class="service-info">
+            <span><strong>Гидравлические испытания</strong>
+            <p>Проверка прочности и герметичности систем отопления 
+                и водоснабжения проводится с использованием гидравлических 
+                испытаний, помогающих выявить утечки и оценить состояние системы. 
+                Процесс включает заполнение системы жидкостью и подачу давления, 
+                превышающего рабочие параметры.</p>
+            </span>
+            <a href="/services/hydraulic_testing" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="line">
+        <span>Отопление</span>
+        <svg width="100%" viewBox="0 0 901 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3H898" stroke="#E84332" stroke-width="5" stroke-linecap="round"/>
+        </svg>                    
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монтаж_газового_котла.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж газового котла</strong>
+            <p>Услуга включает установку газового котла, который обеспечивает 
+                эффективное и экономичное отопление. Включает выбор и установку 
+                котла, подключение к газовой сети и настройку оборудования для 
+                оптимальной работы системы отопления.</p>
+            </span>
+            <a href="/services/gas_boiler_installation" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монтаж_твердотоплевного_котла.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж твердотоплевных котлов</strong>
+            <p>Услуга по установке твердотопливных котлов охватывает весь процесс, 
+                от выбора подходящей модели до её установки и подключения. 
+                Специалисты проводят монтаж котла, подключение к системе отопления, 
+                а также обеспечивают долгосрочную эксплуатацию и эффективность системы.</p>
+            </span>
+            <a href="/services/installation_of_a_solid_fuel_boiler" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монтаж_коллектора.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж коллектора</strong>
+            <p>Коллекторная система распределения воды позволяет равномерно 
+                распределять водоснабжение по всем точкам потребления в доме. 
+                Услуга включает установку коллектора, подключение трубопроводов и 
+                настройку системы для оптимальной работы.</p>
+            </span>
+            <a href="/services/manifold_installation" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монтаж_электроотопления.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж электроотопления</strong>
+            <p>Установка систем электрического отопления включает выбор и монтаж 
+                электрических обогревателей, теплых полов и других элементов. 
+                Электрическое отопление предоставляет возможность точного контроля 
+                температуры в каждом помещении, обеспечивая удобство и комфорт.</p>
+            </span>
+            <a href="/services/installation_of_electric_heating" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монтаж_котельной_под_ключ.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж котельной под ключ</strong>
+            <p>Комплексная услуга по проектированию и установке котельной. 
+                Включает проектирование системы, монтаж котлов, обвязку и 
+                настройку всего оборудования. Готовое решение для организации 
+                системы отопления, обеспечивающее полный контроль и эффективность 
+                работы.</p>
+            </span>
+            <a href="/services/turnkey_boiler_installation" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монтаж_отопления_в_частном_доме.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж отопления в частном доме</strong>
+            <p>Услуга включает проектирование и установку системы отопления 
+                в частном доме. Процесс включает выбор и установку котлов, 
+                радиаторов, трубопроводов и другого оборудования. Специалисты 
+                учитывают все особенности вашего дома для наиболее эффективного 
+                решения.</p>
+            </span>
+            <a href="/services/installation_of_heating_in_a_private_house" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монаж_радиаторов_отопления.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж радиаторов отопления</strong>
+            <p>Установка радиаторов отопления включает выбор и монтаж радиаторов, 
+                подключение их к системе отопления и полную настройку. Специалисты 
+                помогут выбрать радиаторы и правильно их установить, чтобы обеспечить 
+                равномерное отопление и высокую эффективность работы системы.</p>
+            </span>
+            <a href="/services/installation_of_heating_radiators" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Промывка_систем_отопления.png' %}">
+        <div class="service-info">
+            <span><strong>Промывка систем отопления</strong>
+            <p>Промывка системы отопления включает очистку трубопроводов, радиаторов 
+                и других компонентов от накопившихся отложений, грязи и коррозии. 
+                Эта услуга помогает восстановить эффективность работы системы и улучшить 
+                циркуляцию теплоносителя.</p>
+            </span>
+            <a href="/services/flushing_of_heating_systems" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Теплые_полы.png' %}">
+        <div class="service-info">
+            <span><strong>Теплые полы</strong>
+            <p>Теплые полы представляют собой систему отопления, которая равномерно 
+                распределяет тепло по поверхности пола. Услуга охватывает проектирование 
+                и установку различных типов теплых полов, включая водяные и электрические.</p>
+            </span>
+            <a href="/services/warm_floors" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="line">
+        <span>Водоснабжение</span>
+        <svg width="100%" viewBox="0 0 901 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3H898" stroke="#E84332" stroke-width="5" stroke-linecap="round"/>
+        </svg>                    
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монтаж_водоснабжения_в_частном_доме.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж водоснабжения в частном доме</strong>
+            <p>Комплексная услуга по установке системы водоснабжения в частном доме. 
+                Включает в себя разработку схемы водоснабжения, монтаж трубопроводов, 
+                подключение к источникам воды (скважина, центральный водопровод) и установку 
+                необходимых устройств (насосы, фильтры, счетчики).</p>
+            </span>
+            <a href="/services/installation_of_water_supply_in_a_private_house" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Замена_труб_в_квартире.png' %}">
+        <div class="service-info">
+            <span><strong>Замена труб в квартире</strong>
+            <p>Услуга включает демонтаж старых труб и установку новых систем водоснабжения 
+                и канализации. Это позволяет улучшить качество воды, предотвратить протечки 
+                и повысить надежность водопроводной системы. Используются современные 
+                материалы для безопасности эксплуатации.</p>
+            </span>
+            <a href="/services/replacing_pipes_in_an_apartment" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Обустройство_скважины_на_воду.png' %}">
+        <div class="service-info">
+            <span><strong>Обустройство скважины на воду</strong>
+            <p>Полный комплекс работ по обустройству скважины, начиная с бурения и заканчивая 
+                установкой системы водоснабжения. Включает подбор и установку насосного 
+                оборудования, фильтров и систем защиты. Обеспечивает автономное водоснабжение 
+                с чистой и безопасной водой.</p>
+            </span>
+            <a href="/services/construction_of_a_water_well" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Установка_насоса_в_колодец.png' %}">
+        <div class="service-info">
+            <span><strong>Установка насоса в колодец</strong>
+            <p>Услуга по установке погружных и поверхностных насосов для обеспечения 
+                водоснабжения из колодца. Включает подбор подходящего насоса, его установку 
+                и подключение к системе водоснабжения дома. Гарантирует эффективное и 
+                бесперебойное водоснабжение.</p>
+            </span>
+            <a href="/services/installing_a_pump_in_a_well" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="line">
+        <span>Канализация</span>
+        <svg width="100%" viewBox="0 0 901 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3H898" stroke="#E84332" stroke-width="5" stroke-linecap="round"/>
+        </svg>                    
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монтаж_септика.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж септика</strong>
+            <p>Монтаж септика представляет собой комплекс работ по установке автономной 
+                системы очистки сточных вод. Услуга включает выбор и установку септика, 
+                подготовку котлована, подключение трубопроводов и настройку системы для 
+                оптимальной работы.</p>
+            </span>
+            <a href="/services/installation_of_septic_tank" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Монтаж_систем_канализации.png' %}">
+        <div class="service-info">
+            <span><strong>Монтаж систем канализации</strong>
+            <p>Монтаж систем канализации включает проектирование, установку и настройку 
+                внутренней и наружной канализации. Услуга охватывает все этапы – от 
+                разработки схемы системы до укладки труб и подключения санитарно-технических 
+                приборов.</p>
+            </span>
+            <a href="/services/installation_of_sewerage_systems" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="line">
+        <span>Водоотчистка</span>
+        <svg width="100%" viewBox="0 0 901 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3H898" stroke="#E84332" stroke-width="5" stroke-linecap="round"/>
+        </svg>                    
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Установка_систем_водоочистки_в_частном_доме.png' %}">
+        <div class="service-info">
+            <span><strong>Установка систем водоочистки в частном доме</strong>
+            <p>Установка систем водоочистки предназначена для обеспечения чистой и 
+                безопасной воды в вашем частном доме. Услуга включает в себя проведение 
+                анализа исходной воды, проектирование индивидуальных решений по очистке, 
+                установку фильтров и других очистных устройств.</p>
+            </span>
+            <a href="/services/installation_of_water_purification_systems_in_a_ph" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+    <div class="line">
+        <span>Проектирование</span>
+        <svg width="100%" viewBox="0 0 901 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3H898" stroke="#E84332" stroke-width="5" stroke-linecap="round"/>
+        </svg>                    
+    </div>
+    <div class="service-block">
+        <img src="{% static 'servises/Проектирование_систем_отопления.png' %}">
+        <div class="service-info">
+            <span><strong>Проектирование систем отопления</strong>
+            <p>Проектирование систем отопления включает создание индивидуального проекта 
+                для эффективного обогрева помещения, учитывая его особенности и потребности. 
+                Процесс включает анализ площади, теплотехнических характеристик и доступных 
+                источников энергии.</p>
+            </span>
+            <a href="/services/design_of_heating_systems" class="button">
+                <span class="text">Перейти</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'header.html' %}
+{% block title %} {{ gallery.title }}{% endblock %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/gallery.css' %}">
+{% endblock %}
+{% block content %}
+<div class="gallery-block">
+    <div class="title">
+        <span>{{ gallery.title }}</span>
+    </div>
+    <div style="display: inline-flex; margin-left: auto; margin-right: auto; margin-top: 43.8px;">
+        <div class="arrow" id="prev">
+            <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.30531 9.95803L11.3015 16.9542L9.3026 18.9531L0.307538 9.95803L9.3026 0.963054L11.3015 2.96194L4.30531 9.95803Z" fill="#1D1D1B"/>
+            </svg>            
+        </div>
+        <div class="slider">     
+            <div class="slides">
+                {% for image in images %}
+                    <div class="slide">
+                        <img src="{% static image.image %}">
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="navigation">
+                {% for image in images %}
+                    <svg class="dot" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="currentSlide({{forloop.counter0}})">
+                    <circle cx="6" cy="6" r="6"/>
+                    </svg>               
+                {% endfor %}
+            </div>
+        </div>
+        <div class="arrow" id="next">
+            <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.85021 9.96042L0.854004 2.96423L2.85292 0.965332L11.848 9.96042L2.85292 18.9554L0.854004 16.9565L7.85021 9.96042Z" fill="#1D1D1B"/>
+            </svg>        
+        </div>
+    </div>
+</div>
+<script>
+    const slides = document.querySelector('.slides');
+    const dots = document.querySelectorAll('.dot');
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        if (index >= slides.children.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.children.length - 1;
+        } else {
+            currentIndex = index;
+        }
+        slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function currentSlide(index) {
+        showSlide(index);
+    }
+
+    setInterval(() => {
+        showSlide(currentIndex + 1);
+    }, 5000);
+
+    showSlide(currentIndex);
+
+    document.getElementById('prev').addEventListener('click', function() {
+        showSlide(currentIndex - 1);
+    });
+
+    document.getElementById('next').addEventListener('click', function() {
+        showSlide(currentIndex + 1);
+    });
+</script>
+{% endblock %}

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
     'proteplo_app',
 ]
 
@@ -118,6 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
 
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static"),
@@ -127,3 +129,11 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # Бэкенд для отправки email
+EMAIL_HOST = 'smtp.gmail.com'  # SMTP сервер Gmail
+EMAIL_PORT = 587  # Порт для TLS
+EMAIL_USE_TLS = True  # Используем TLS (защищенный протокол)
+EMAIL_HOST_USER = 'starzev.kolechka@gmail.com'  # Ваш Gmail аккаунт
+EMAIL_HOST_PASSWORD = 'sgqx vuig paub phey'  # Пароль от вашего Gmail аккаунта
+DEFAULT_FROM_EMAIL = 'maximagapitow@gmail.com'

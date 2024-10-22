@@ -1,28 +1,37 @@
 html {
-    margin: 0px;
+    margin: 0;
     padding: 0px;
     a {
         text-decoration: none !important;
     }
 }
 header {
-    width: auto;
-    height: 240px;
+    margin: 0;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0 10px 0px rgba(56, 45, 44, 0.2);
+    /* border-radius: 12px; */
+    z-index: 1;
+    top: 0;
+    transition: 0.5s;
+    
     .block {
         position: relative;
         align-items: center;
+        z-index: 1;
         flex-direction: row;
         display: flex;
         width: calc(100% - (50% - 1113.71px/2 - 0.15px) * 2);
+        /* width: 60%; */
         height: 63.54px;
-        left: calc(50% - 1113.71px/2 - 0.15px);
+        margin-left: auto;
+        margin-right: auto;
         top: 49px; 
-    }
-    @media (max-width: 1150px) {
-        .block {
-            width: 950px;
-            left: calc(50% - 950px/2 - 0.15px);
-        }
     }
     .logo {
         display: flex;
@@ -32,6 +41,10 @@ header {
         align-items: center;
         width: 238px;
         height: 63.54px;
+        transition: transform 0.3s;
+    }
+    .logo:hover {
+        transform: scale(1.1);
     }
     .vkladki {
         white-space: nowrap;
@@ -55,15 +68,19 @@ header {
         fill: rgba(29, 29, 27, 1);
     }
     .arrow-1, .arrow-2 {
+        width: 19.11px;
+        height: 19.11px;
         transition: transform 0.5s ease;
+        margin-top: auto;
+        margin-bottom: auto;
     }
     .flipped {
         transform: rotate(180deg);
     }
-    a:hover, .item:hover {
+    .vkladki-text:hover, .item:hover {
         .vkladki-text {
             color: rgba(122, 122, 122, 1);
-        }
+        }    
         .arrows svg path {
             fill: rgba(122, 122, 122, 1);
         }
@@ -79,7 +96,6 @@ header {
         /* display: none; */
         display: flex;
         pointer-events: none;
-        z-index: 1;
         position: absolute;
         width: 317px;
         height: 344px;
@@ -90,11 +106,6 @@ header {
         box-shadow: 0px 160px 129.12px 0px rgba(56, 45, 44, 0.1);
         transition: 0.5s;
         opacity: 0;
-    }
-    @media (max-width: 1150px) {
-        .services-tab-box {
-            left: calc(50% - 520px/2 - 0.15px);
-        }
     }
     .services-tab {
         display: flex;
@@ -109,6 +120,54 @@ header {
         left: 0;
         margin: auto;
     }
+    .services-tab a {
+        font-family: Montserrat;
+        font-size: 15.93px;
+        font-weight: 400;
+        line-height: 19.41px;
+        text-align: left;
+        color: rgba(29, 29, 27, 1);
+    }
+    .services-tab a:hover {
+        color: rgba(122, 122, 122, 1);
+    }
+    @media (max-width: 1150px) {
+        .block {
+            width: 670px;
+        }
+        .logo {
+            width: 140px;
+            height: 40,05px;
+        }
+        .logo-picture {
+            width: 35px;
+            height: 43.92px;
+        }
+        .logo-text {
+            width: 100px;
+            height: 13.63px;
+        }
+        .vkladki {
+            width: 500px;
+        }
+        .vkladki-text {
+            font-size: 12px;
+            line-height: 19.41px;
+        }
+        .services-tab-box {
+            left: calc(50% - 550px/2 - 0.15px);
+            width: 250px;
+            height: 271.29px;
+        }
+        .services-tab {
+            width: 200px;
+            height: 207.93px;
+            a {
+                font-size: 12px;
+                line-height: 19.41px;
+            }
+        }
+    }
     .services-tab .item .vkladki-text, .services-tab .vkladki-text, .services-tab .vkladki-text:visited {
         color: rgb(29, 29, 27);
     }
@@ -122,6 +181,17 @@ header {
         position: absolute;     
         right: 40px;
     }
+    @media (max-width: 1150px) {
+        .services-tab .item .arrows {    
+            right: 30px;
+            width: 6px;
+            height: 10.5px;
+        }
+        .services-tab .item .arrows svg {    
+            width: 6px;
+            height: 10.5px;
+        }
+    }
     .item-1:hover .services-tab-box {
         /* display: flex; */
         pointer-events: all;
@@ -133,6 +203,9 @@ header {
     .item-1:hover .services-tab-box .services-tab .item:hover {
         .arrows svg path {
             fill: rgba(122, 122, 122, 1);
+        }
+        span {
+            color: rgba(122, 122, 122, 1);
         }
     }
     .services-tab .item-3 .services-tab-box {
@@ -163,6 +236,12 @@ header {
         .services-tab .item-3 .services-tab-box {
             left: auto;
             right: calc(50% - 730px/2 - 0.15px);
+            width: 290px;
+            height: 339.4px;
+        }
+        .services-tab .item-3 .services-tab-box .services-tab {
+            width: 230px;
+            height: 270.05px;
         }
     }
     .services-tab .item-4 .services-tab-box {
@@ -191,8 +270,15 @@ header {
     }
     @media (max-width: 1150px) {
         .services-tab .item-4 .services-tab-box {
+            top: 27px;
             left: auto;
-            right: calc(50% - 615px/2 - 0.15px);
+            right: calc(50% - 650px/2 - 0.15px);
+            width: 250px;
+            height: 207.65px;
+        }
+        .services-tab .item-4 .services-tab-box .services-tab {
+            width: 200px;
+            height: 150.97px;
         }
     }
     .services-tab .item-5 .services-tab-box {
@@ -221,8 +307,15 @@ header {
     }
     @media (max-width: 1150px) {
         .services-tab .item-5 .services-tab-box {
+            top: 70px;
             left: auto;
             right: calc(50% - 630px/2 - 0.15px);
+            width: 240px;
+            height: 100.41px;
+        }
+        .services-tab .item-5 .services-tab-box .services-tab {
+            width: 200px;
+            height: 48.73px;
         }
     }
     .services-tab .item-6 .services-tab-box {
@@ -252,7 +345,13 @@ header {
     @media (max-width: 1150px) {
         .services-tab .item-6 .services-tab-box {
             left: auto;
-            right: calc(50% - 670px/2 - 0.15px);
+            top: 98px;
+            right: calc(50% - 630px/2 - 0.15px);
+            width: 240px;
+            height: 80px;
+        }
+        .services-tab .item-6 .services-tab-box .services-tab {
+            width: 190px;
         }
     }
     .services-tab .item-7 .services-tab-box {
@@ -281,7 +380,13 @@ header {
     @media (max-width: 1150px) {
         .services-tab .item-7 .services-tab-box {
             left: auto;
-            right: calc(50% - 670px/2 - 0.15px);
+            top: 165px;
+            right: calc(50% - 710px/2 - 0.15px);
+            width: 280px;
+            height: 68.03px;
+        }
+        .services-tab .item-7 .services-tab-box .services-tab {
+            width: 210px;
         }
     }
     .item-2 .services-tab-box {
@@ -293,28 +398,182 @@ header {
         transition: 0.5s;
         opacity: 0;
     }
-    @media (max-width: 1150px) {
-        .item-2 .services-tab-box {
-            left: auto;
-            right: calc(50% - 855px/2 - 0.15px);
-        }
-    }
     .item-2 .services-tab-box .services-tab {
         width: 323.2px;
         height: 103.2px;
+    }
+    @media (max-width: 1150px) {
+        .item-2 .services-tab-box {
+            left: auto;
+            right: calc(50% - 520px/2 - 0.15px);
+            width: 300px;
+            height: 128.13px;
+        }
+        .item-2 .services-tab-box .services-tab {
+            width: 250px;
+            height: 79.83px;
+        }
     }
     .item-2:hover .services-tab-box {
         /* display: flex; */
         pointer-events: all;
         opacity: 1;
     }
+    @media (max-width: 1150px) {
+        .arrows {
+            width: 15px;
+            height: 15px;
+        }
+        .arrows svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .mobile-block {
+        display: none;
+    }
+    @media (max-width: 930px) {
+        header {
+            height: 100px;
+        }
+        .block {
+            display: none;
+        }
+        .mobile-block {
+            position: relative;
+            display: grid;
+            align-items: center;
+        }
+        .menu {
+            position: absolute;
+            margin-left: 25px;
+        }
+        .menu path {
+            transition: 0.3s;
+        }
+        .menu:hover {
+            cursor: pointer;
+            path {
+                fill: rgba(122, 122, 122, 1);
+            }
+        }
+        .logo {
+            width: 97.39px;
+            height: 26px;
+            display: flex;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .call {
+            position: absolute;
+            right: 0;
+            margin-right: 25px;
+        }
+        .call path {
+            transition: 0.3s;
+        }
+        .call:hover {
+            cursor: pointer;
+            path {
+                fill: rgba(122, 122, 122, 1);
+            }
+        }
+        .panel {
+            width: 100%;
+            height: calc(100% - 68px);
+            /* height: 82.5%; */
+            position: fixed;
+            left: -100%;
+            top: 68px;
+            transition: 0.3s;
+            background-color: rgb(255, 255, 255);
+            overflow-y: scroll;
+        }
+        .panel.open {
+            left: 0;
+        }
+        .panel-1, .panel-2, .panel-3, .panel-4, .panel-5, .panel-6, .panel-7 {
+            height: 0;
+            transition: height 0.5s ease;
+            overflow: hidden;
+        }
+        .panel-1.open, .panel-2.open, .panel-3.open, .panel-4.open, .panel-5.open, .panel-6.open, .panel-7.open {
+            height: max-content;
+        }
+        .level-1 {
+            display: flex;
+            width: max-content;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgb(29, 29, 27);
+            margin-left: 25px;
+            margin-top: 25px;
+            align-items: center;
+            cursor: pointer;
+        }
+        .level-1.open, .level-2.open {
+            color: rgba(122, 122, 122, 1);
+            .arrow path {
+                fill: rgba(122, 122, 122, 1);
+            }
+            .arrow {
+                transform: rotate(180deg);
+            }
+        }
+        .level-2, .level-3 {
+            display: flex;
+            width: max-content;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgb(29, 29, 27);
+            margin-left: 40px;
+            margin-top: 25px;
+            align-items: center;
+            cursor: pointer;
+        }
+        .level-3 {
+            margin-left: 54px;
+        }
+        .level-1 .arrow, .level-2 .arrow {
+            align-self: center;
+            transition: transform 0.5s ease;       
+        }
+        .level-1:hover, .level-2:hover, .level-3:hover {
+            color: rgba(122, 122, 122, 1);
+            .arrow path {
+                fill: rgba(122, 122, 122, 1);
+            }
+        }
+    }
+}
+@media (max-width: 930px) {
+    header {
+        height: 68px;
+        transition: 0.5s;
+    }
 }
 footer {
-    .block {
+    margin: 0;
+    .footer-block {
         position: relative;
-        top: 300px;
+        top: 200px;
         width: 100%;
         height: 529px;
+        background: rgb(29, 29, 27);
+    }
+    .footer-block-mobile {
+        position: relative;
+        display: none;
+        top: 200px;
+        width: 100%;
+        height: 175px;
         background: rgb(29, 29, 27);
     }
     .main-text:hover, .uslugi-text:hover {
@@ -327,11 +586,7 @@ footer {
         left: calc(50% - 1113.71px/2 - 0.15px);
         top: 60px;
     }
-    @media (max-width: 1150px) {
-        .block {
-            left: calc(50% - 800px/2 - 0.15px);
-        }
-    }
+
     .main-text {
         font-family: 'Montserrat';
         font-style: normal;
@@ -433,136 +688,124 @@ footer {
         line-height: 20px;
         color: rgb(255, 255, 255);
     }
+    @media (max-width: 1220px) {
+        .main-text {
+            font-size: 12px;
+        }
+        .question-text {
+            font-size: 10px;
+        }
+        .uslugi-text {
+            font-size: 12px;
+        }
+        .question {
+            left: calc(50% - 900px / 2 - 0.15px);
+            top: 70px;
+            width: 165px;
+            height: 118.2px;
+        }
+        .contacts {
+            height: 77px;
+        }
+        .poduslugi-6 {
+            width: 200px;
+            height: 62.5px;
+        }
+        .poduslugi-5 {
+            width: 200px;
+            height: 146.06px;
+        }
+        .poduslugi-4 {
+            width: 200px;
+            height: 212.7px;
+        }
+        .poduslugi-3 {
+            width: 230px;
+            height: 220.11px;
+        }
+        .uslugi-2 {
+            width: 430px;
+            height: 220px;
+        }
+        .poduslugi-2 {
+            width: 90px;
+            height: 108.31px;
+        }
+        .poduslugi-1 {
+            width: 220px;
+            height: 140.31px;
+        }
+        .uslugi {
+            top: -47px;
+            left: calc(50% - 450px / 2 - 0.15px);
+            width: 660px;
+            height: 256px;
+        }
+    }
     .prava {
         position: relative;
         text-align: center;
     }
-}
-body {
-    .main-block {
-        position: relative;
-        width: 1119.2px;
-        height: 592px;
-        margin-left: calc(50% - 1119.2px/2 - 0.4px);
-        .lutchie {
+    @media (max-width: 930px) {
+        .footer-block {
+            display: none;
+        }
+        .footer-block-mobile {
+            display: block;
+            top: 100px
+        }
+        .podblock-mobile {
+            position: relative;
+            display: grid;
+            width: 209px;
+            height: 84px;
+            margin-left: auto;
+            margin-right: auto;
+            top: 25px;
+        }
+        .main-text {
+            width: 109px;
+            height: 20px;
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 700;
-            font-size: 52px;
-            line-height: 63px;
-            text-transform: uppercase;
-            color: rgb(232, 67, 50);
+            font-size: 8px;
+            line-height: 10px;
+            color: rgb(255, 255, 255);           
         }
-        .lutchie span {
-            color: rgb(0, 0, 0);
-        }
-        .lutchie-text {
+        .question-text {
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
-            color: rgb(29, 29, 27);
-        }
-        .buttons {
-            display: flex;
-            width: 479.4px;
-            height: 58.4px;
-            margin-top: 60.8px;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .button-1 {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 18px 25px;
-            gap: 10px;
-            width: 276px;
-            height: 57px;
-            background: rgb(232, 67, 50);
-            border-radius: 112px;
-            transition: 0.3s;
-        }
-        .button-1:hover {
-            border: 1.6px solid rgb(232, 67, 50);
-            background: rgb(255, 255, 255);
-            cursor: pointer;
-        }
-        .button-1 .text {
-            width: 226px;
-            height: 21px;
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 17.6px;
-            line-height: 21px;
+            font-size: 8px;
+            line-height: 10px;
             color: rgb(255, 255, 255);
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-            transition: 0.3s;
+            vertical-align: middle;
         }
-        .button-1:hover .text {
-            color: rgb(232, 67, 50);
-        }
-        .button-2 {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 18px 25px;
-            gap: 10px;
-            width: 171px;
-            height: 57px;
-            border: 1.6px solid rgb(232, 67, 50);
-            border-radius: 112px;
-            transition: 0.3s;
-        }
-        .button-2:hover {
-            border: 0;
-            background: rgb(232, 67, 50);
-            cursor: pointer;
-        }
-        .button-2 .text {
-            width: 121px;
-            height: 21px;
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 17.6px;
-            line-height: 21px;
-            color: #E84332;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-            transition: 0.3s;
-        }
-        .button-2:hover .text {
-            color: rgb(255, 255, 255);
-        }
-        .image-block {
+        .contacts {
             position: absolute;
             display: flex;
-            bottom: 0;
-            right: 0;
-            width: 572px;
-            height: 468.8px;
-            filter: drop-shadow(0px 0px 129.12px rgba(56, 45, 44, 0.1));
-            .circle {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
+            flex-direction: column;
+            justify-content:space-between;
+            width: 122px;
+            height: 54px;
         }
-    }
-    .arrow {
-        display: flex;
-        margin-top: 63px;
-        margin-left: auto;
-        margin-right: auto;
+        .contacts svg {
+            width: 8px;
+            height: 8px;
+            margin-right: 7px;
+            vertical-align: middle;
+        }
+        .prava {
+            margin-top: 70px;
+        }
+        .prava-text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 10px;
+            color: rgb(255, 255, 255);
+        }
     }
 }

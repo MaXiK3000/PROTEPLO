@@ -1,0 +1,80 @@
+{% extends 'header.html' %}
+{% block title %} Галерея{% endblock %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/gallerys.css' %}">
+{% endblock %}
+{% block content %}
+<div class="gallerys-block">
+    <div class="title">
+        <span>Галерея наших работ</span>
+    </div>
+    <div class="gallerys-text">
+        <span>В этой галерее представлены фотографии 
+            наших выполненных проектов. Здесь вы можете 
+            увидеть примеры нашей работы по монтажу систем 
+            отопления, вентиляции, водопровода и канализации. 
+            Мы гордимся каждым проектом и уверены, что наши 
+            работы говорят сами за себя.
+        </span>
+    </div>
+    <div class="uslugi-block">
+        <div class="poduslugi-block-column">
+            <a href="/gallery/turnkey_boiler_installation" class="poduslugi-block-row">
+                <div class="shadow">
+                    <img src="{% static 'servises/Монтаж_котельной_под_ключ.png' %}">
+                    <span>Монтаж котельных под ключ</span>
+                </div>
+            </a>
+            <a href="/gallery/manifold_installation" class="poduslugi-block-row">
+                <div class="shadow">
+                    <img src="{% static 'servises/Монтаж_коллектора.png' %}">
+                    <span>Монтаж коллектора</span>
+                </div>
+            </a>
+        </div>
+        <div class="poduslugi-block-column">
+            <a href="/gallery/installation_of_underfloor_heating" class="poduslugi-block-row">
+                <div class="shadow">
+                    <img src="{% static 'servises/Теплые_полы.png' %}">
+                    <span>Монтаж теплого пола</span>
+                </div>
+            </a>
+            <a href="/gallery/installation_of_solid_fuel_boilers" class="poduslugi-block-row">
+                <div class="shadow">
+                    <img src="{% static 'servises/Монтаж_твердотоплевного_котла.png' %}">
+                    <span>Монтаж твердотопливных котлов</span>
+                </div>
+            </a>
+        </div>
+        <div class="poduslugi-block-column">
+            <a href="/gallery/installation_of_water_supply_systems" class="poduslugi-block-row">
+                <div class="shadow">
+                    <img src="{% static 'servises/Монтаж_водоснабжения_в_частном_доме.png' %}">
+                    <span>Монтаж систем водоснабжения</span>
+                </div>
+            </a>
+            <a href="/gallery/installation_of_sewerage" class="poduslugi-block-row">
+                <div class="shadow">
+                    <img src="{% static 'servises/Монтаж_систем_канализации.png' %}">
+                    <span>Монтаж канализации</span>
+                </div>
+            </a>
+        </div>
+        <div class="poduslugi-block-column">
+            <a href="/gallery/gas_boiler_installation" class="poduslugi-block-row">
+                <div class="shadow">
+                    <img src="{% static 'servises/Монтаж_газового_котла.png' %}">
+                    <span>Монтаж газового котла</span>
+                </div>
+            </a>
+            <a href="/gallery/installation_of_heating_radiators" class="poduslugi-block-row">
+                <div class="shadow">
+                    <img src="{% static 'servises/Монаж_радиаторов_отопления.png' %}">
+                    <span>Монтаж радиаторов отопления</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

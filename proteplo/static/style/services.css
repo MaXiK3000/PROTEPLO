@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    .services-block {
+        margin-top: 200px;
+        display: block;
+        text-align: center;
+        .title span {
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 49px;
+            text-transform: uppercase;
+            color: rgb(29, 29, 27);
+        }
+        .services-text {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 22.2px;
+            width: 780.8px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: rgb(29, 29, 27);
+        }
+        .service-block {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 45px;
+            width: 1225px;
+        }
+        .service-block img {
+            width: 340px;
+            height: 214px;
+            background: rgb(217, 217, 217);
+            border-radius: 16px;
+        }
+        .service-info {
+            position: relative;
+            display: block;
+            margin-left: 45px;
+            text-align: start;
+        }
+        .service-info span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: rgb(29, 29, 27);
+        }
+        .service-info span strong {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 37px;
+        }
+        .service-info p {
+            margin-block-start: 7px;
+            margin-block-end: 7px;
+        }
+        .button {
+            position: absolute;
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 18px 25px;
+            gap: 10px;
+            width: 132px;
+            height: 57px;
+            background: rgb(232, 67, 50);
+            border-radius: 112px;
+            transition: 0.3s;
+            bottom: 0;
+        }
+        .button:hover {
+            border: 1.6px solid rgb(232, 67, 50);
+            background: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+        .button .text {
+            height: 21px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17.6px;
+            line-height: 21px;
+            color: rgb(255, 255, 255);
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            transition: 0.3s;
+        }
+        .button:hover .text {
+            color: rgb(232, 67, 50);
+        }
+        .line {
+            display: flex;
+            width: 1225px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 45px;
+        }
+        .line span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            color: rgb(29, 29, 27);
+            margin-right: 37px;
+        }
+    }
+}
+header {
+    .item-1 .vkladki-text {
+        color: rgba(122, 122, 122, 1);
+    }
+    .item-1 .arrows svg path {
+        fill: rgba(122, 122, 122, 1);
+    }
+    
+}

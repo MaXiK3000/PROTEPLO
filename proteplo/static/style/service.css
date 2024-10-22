@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    margin-top: 200px;
+    .service-block {
+        .title {
+            display: flex;
+            width: max-content;
+            height: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 44px;
+        }
+        .title span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 49px;
+            color: rgb(29, 29, 27);
+        }
+        img {
+            display: flex;
+            width: 683px;
+
+            background: rgb(217, 217, 217);
+            border-radius: 16px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .service-text {
+            display: flex;
+            width: 824px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            border-left: 4px solid rgba(232, 67, 50, 1);
+        }
+        .service-text span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #1D1D1B;
+            margin-left: 24px;
+        }
+        .p0 span p:first-child {
+            margin-block-start: 0;
+        }
+        .p0 span ul:last-child, .p0 span p:last-child {
+            margin-block-end: 0;
+        }
+        .service-text span strong {
+            font-weight: 600;
+        }
+    }
+    @media (max-width: 930px) {
+        .service-block {
+            .title {
+                width: 269px;
+                margin-bottom: 22px;
+            }
+            .title span {
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            img {
+                width: 269px;
+                border-radius: 6.16px;
+            }
+            .service-text {
+                width: 273px;
+                margin-top: 22px;
+                border-left: 2px solid rgba(232, 67, 50, 1);
+            }
+            .service-text span {
+                font-size: 10px;
+                line-height: 12px;
+                margin-left: 8px;
+            }
+            .service-text span ul {
+                padding-inline-start: 14px;
+            }
+        }     
+    }
+}
+@media (max-width: 930px) {
+    body {
+        margin-top: 100px;
+    }
+}
+header {
+    .item-1 .vkladki-text {
+        color: rgba(122, 122, 122, 1);
+    }
+    .item-1 .arrows svg path {
+        fill: rgba(122, 122, 122, 1);
+    }
+}

@@ -1,0 +1,28 @@
+{% extends 'header.html' %}
+{% block title %} {{ service.title }}{% endblock %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/service.css' %}">
+{% endblock %}
+{% block content %}
+<div class="service-block">
+    <div class="title">
+        <span>{{ service.title }}</span>
+    </div>
+    <img src="{{ service.image.url }}" alt="{{ service.image }}">
+    <div class="service-text p0">
+        <span>{{ service.text | safe}}</span>
+    </div>
+    <div class="service-text" style=" border-left: none">
+        <span><strong>Если у вас возникли вопросы или вы хотите узнать больше о наших услугах, свяжитесь с нами:</strong>
+        <p>
+            <ul>
+                <li>Телефон: +7 (123) 456-78-90</li>
+                <li>Электронная почта: info@example.com</li>
+                <li>Адрес офиса: ул. Примерная, 1, г. Москва</li>
+            </ul>
+        </p>
+        <p><strong>Наша команда всегда готова помочь вам в создании надежной и эффективной системы отопления и горячего водоснабжения для вашего дома.</strong></p></span>
+    </div>
+</div>
+{% endblock %}
